@@ -25,13 +25,13 @@ def enc(prv):
 	print 'encrypt string: ',encoded
 
 
-def dec(encryptedString):
+def dec(encr):
 
-	PADDING = '{'
-	DecodeAES = lambda c, e: c.decrypt(base64.b64decode(e)).rstrip(PADDING)
+	padding = '{'
+	DecodeAES = lambda c, e: c.decrypt(base64.b64decode(e)).rstrip(padding)
 	
 
-	encryption = encryptedString
+	encryption = encr
 
 	key=secret	
 
